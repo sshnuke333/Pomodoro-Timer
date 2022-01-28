@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyledDiv } from './Display.styles';
+import { Background, StyledDiv } from './Display.styles';
 import { useTimeData } from '../state';
 
 const convertToTime = (sec) => {
@@ -13,10 +13,13 @@ const convertToTime = (sec) => {
 export const Display = () => {
     let { time } = useTimeData();
     return (
-        <StyledDiv id="time-left">
-            {time.sessionLeft === -1
-                ? convertToTime(time.breakLeft)
-                : convertToTime(time.sessionLeft)}
-        </StyledDiv>
+        <Background>
+            <StyledDiv id="timer-label">{time.timer}</StyledDiv>
+            <StyledDiv id="time-left">
+                {time.sessionLeft === -1
+                    ? convertToTime(time.breakLeft)
+                    : convertToTime(time.sessionLeft)}
+            </StyledDiv>
+        </Background>
     );
 };

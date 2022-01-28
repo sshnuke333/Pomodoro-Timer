@@ -1,12 +1,19 @@
 import styled from 'styled-components';
 
-export const StyledDiv = styled.div`
-    width: 20rem;
-    height: 20rem;
+export const Background = styled.div`
+    width: 25rem;
+    height: 25rem;
     border-radius: 50%;
-    background-color: aquamarine;
+    margin: 1rem 0;
+    background-color: coral;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 4rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0.25rem 0.25rem;
+`;
+export const StyledDiv = styled.div`
+    font-size: 3.5rem;
 `;

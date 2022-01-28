@@ -10,4 +10,11 @@ body {
     align-items: center;
 }
 
+#root {
+    width: 25rem;
+    display: grid;
+    grid-template-rows: 1fr 20rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
 `;
