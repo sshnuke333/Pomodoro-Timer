@@ -1,4 +1,17 @@
 {
     "presets": ["@babel/env", "@babel/react"],
-    "plugins": ["@babel/transform-runtime", "babel-plugin-styled-components"]
+    "plugins": [
+        "@babel/transform-runtime",
+        "babel-plugin-styled-components",
+        [
+            "babel-plugin-direct-import",
+            {
+                "modules": [
+                    "@mui/styled-engine-sc",
+                    "@mui/material",
+                    "@mui/icons-material"
+                ]
+            }
+        ]
+    ]
 }
